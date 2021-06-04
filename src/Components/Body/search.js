@@ -6,6 +6,7 @@ const Search = ({ setKeyword, request, isLoading, setLoading }) => {
 
   useEffect(() => {
     setKeyword(value);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
   const handleClick = () => {
