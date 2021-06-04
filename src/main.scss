@@ -1,0 +1,249 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&family=Nunito:wght@600&family=Open+Sans:wght@400;600&display=swap");
+@import "variables";
+
+body {
+  background-color: $bg;
+  font-family: "Nunito", sans-serif;
+}
+
+.header {
+  margin-top: 2.25rem;
+  max-width: 59.375rem;
+}
+
+.logo {
+  font-family: "Marck Script", cursive;
+  font-size: 2rem;
+  color: $blue-dark;
+  line-height: 4.6875rem;
+  svg {
+    fill: $blue-dark;
+    margin: auto 0;
+  }
+}
+
+.search {
+  max-width: 59.375rem;
+  height: 2.5rem;
+  margin: 2.25rem auto;
+  button {
+    background-color: $green;
+    border: none;
+  }
+  button:hover,
+  button:active,
+  button:focus {
+    background-color: darken($color: $green, $amount: 10);
+  }
+}
+
+.banner {
+  width: fit-content;
+  img {
+    height: 18.75rem;
+    width: 59.375rem;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+}
+
+.foodcard {
+  width: 18.75rem;
+  min-width: 18.75rem;
+  max-width: 18.75rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  transition: ease 0.3s;
+}
+.foodcard:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.time {
+  font-size: 0.75rem;
+  padding: 4px 6px;
+  border-radius: 20px;
+  background-color: $green;
+  width: fit-content;
+  color: $white;
+  position: absolute;
+  right: -16px;
+  top: 8px;
+}
+
+.title {
+  font-size: 1rem;
+  color: $blue-dark;
+}
+
+.cal {
+  font-size: 0.75rem;
+  color: $blue-light;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.serving {
+  font-size: 0.875rem;
+  color: $blue-light;
+}
+
+.list {
+  max-width: 59.375rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.loader {
+  z-index: 100 !important;
+  color: $white;
+}
+
+.ta-end {
+  text-align: end;
+}
+
+.greeting {
+  width: 59.375rem;
+  position: absolute;
+  bottom: 0;
+  color: $white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  color: $blue-dark !important;
+}
+
+.recipe-modal {
+  background-color: $white;
+  height: auto;
+  max-height: 95vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  padding: 2.25rem;
+  max-width: 45rem;
+  overflow: auto;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+}
+
+.label {
+  font-size: 1.5rem;
+  color: $blue-dark;
+}
+
+.bgs-blue {
+  background-color: $blue-dark;
+}
+
+.img-modal {
+  object-fit: cover;
+  width: 12.5rem;
+  height: 12.5rem;
+  float: right;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+
+.img-fit {
+  object-fit: cover;
+}
+
+.ing-card {
+  width: 150px;
+  border: none;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ing-body {
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  color: $blue-light;
+}
+
+.ing {
+  font-size: 1rem;
+  color: $blue-dark;
+}
+
+.ing-container {
+  overflow: auto;
+  padding: 0.75rem 0.75rem 0.75rem 0;
+  flex-wrap: nowrap;
+}
+
+.svg {
+  opacity: 0.6;
+  height: 1.2rem !important;
+  fill: $green !important;
+}
+
+.link {
+  font-size: 0.875rem;
+  color: $green;
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.footer {
+  padding: 2rem;
+  background-color: $green;
+  .text {
+    font-size: 1rem;
+    color: $white;
+  }
+  div {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 995px) {
+  .banner {
+    img {
+      width: 100%;
+    }
+  }
+  .greeting {
+    width: 90%;
+  }
+
+  .list {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .recipe-modal {
+    width: 90%;
+    height: 80%;
+    .label {
+      font-size: 1rem;
+    }
+  }
+
+  .header-row {
+    margin: 0 0.75rem;
+  }
+
+  .ta-end {
+    width: fit-content;
+  }
+
+  .row-to-column {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
